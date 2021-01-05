@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ComplianceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_em_employeedetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeCode" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="160" />
+          <Property Name="isactive" Type="char" MaxLength="1" />
+          <Property Name="companycode" Type="varchar" MaxLength="100" />
+          <Property Name="companyname" Type="varchar" MaxLength="100" />
+          <Property Name="branchname" Type="varchar" MaxLength="100" />
+          <Property Name="branchid" Type="int" />
+          <Property Name="REPTMGR1" Type="int" />
+          <Property Name="REPORTINGMANAGER1CODE" Type="varchar" MaxLength="50" />
+          <Property Name="STATE" Type="varchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="OFFICEEMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="ROLEID" Type="int" />
+        </EntityType>
+        <EntityType Name="TBL_MST_BRANCH">
+          <Key>
+            <PropertyRef Name="BRANCH_ID" />
+          </Key>
+          <Property Name="BRANCH_ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="BRANCH_NAME" Type="nchar" MaxLength="10" />
+          <Property Name="ISACTIVE" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TBL_MST_CATEGORIES">
+          <Key>
+            <PropertyRef Name="CATEGORY_ID" />
+          </Key>
+          <Property Name="CATEGORY_ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="CATEGORY_NAME" Type="nchar" MaxLength="10" />
+          <Property Name="CATEGORY_DETAILS" Type="nchar" MaxLength="10" />
+          <Property Name="ISACTIVE" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBL_MST_DOCUMENT_TYPES">
+          <Key>
+            <PropertyRef Name="DOCUMENT_TYPE_ID" />
+          </Key>
+          <Property Name="DOCUMENT_TYPE_ID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="DOCUMENT_TYPE_NAME" Type="nchar" MaxLength="10" />
+          <Property Name="DOCUMENT_TYPE_DETAILS" Type="nchar" MaxLength="10" />
+          <Property Name="ISACTIVE" Type="bit" />
+        </EntityType>
+        <EntityType Name="TBL_MST_ROLES">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="int" Nullable="false" />
+          <Property Name="Role_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Role_Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ComplianceModelStoreContainer">
+          <EntitySet Name="tbl_em_employeedetails" EntityType="Self.tbl_em_employeedetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_MST_BRANCH" EntityType="Self.TBL_MST_BRANCH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_MST_CATEGORIES" EntityType="Self.TBL_MST_CATEGORIES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_MST_DOCUMENT_TYPES" EntityType="Self.TBL_MST_DOCUMENT_TYPES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_MST_ROLES" EntityType="Self.TBL_MST_ROLES" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ComplianceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_em_employeedetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FullName" Type="String" MaxLength="160" FixedLength="false" Unicode="false" />
+          <Property Name="isactive" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="companycode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="companyname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="branchname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="branchid" Type="Int32" />
+          <Property Name="REPTMGR1" Type="Int32" />
+          <Property Name="REPORTINGMANAGER1CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OFFICEEMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROLEID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TBL_MST_BRANCH">
+          <Key>
+            <PropertyRef Name="BRANCH_ID" />
+          </Key>
+          <Property Name="BRANCH_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="BRANCH_NAME" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ISACTIVE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TBL_MST_CATEGORIES">
+          <Key>
+            <PropertyRef Name="CATEGORY_ID" />
+          </Key>
+          <Property Name="CATEGORY_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="CATEGORY_NAME" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CATEGORY_DETAILS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ISACTIVE" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TBL_MST_DOCUMENT_TYPES">
+          <Key>
+            <PropertyRef Name="DOCUMENT_TYPE_ID" />
+          </Key>
+          <Property Name="DOCUMENT_TYPE_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="DOCUMENT_TYPE_NAME" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DOCUMENT_TYPE_DETAILS" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ISACTIVE" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TBL_MST_ROLES">
+          <Key>
+            <PropertyRef Name="Role_Id" />
+          </Key>
+          <Property Name="Role_Id" Type="Int32" Nullable="false" />
+          <Property Name="Role_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Role_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ComplianceEntities4" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_em_employeedetails" EntityType="Self.tbl_em_employeedetails" />
+          <EntitySet Name="TBL_MST_BRANCH" EntityType="Self.TBL_MST_BRANCH" />
+          <EntitySet Name="TBL_MST_CATEGORIES" EntityType="Self.TBL_MST_CATEGORIES" />
+          <EntitySet Name="TBL_MST_DOCUMENT_TYPES" EntityType="Self.TBL_MST_DOCUMENT_TYPES" />
+          <EntitySet Name="TBL_MST_ROLES" EntityType="Self.TBL_MST_ROLES" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ComplianceModelStoreContainer" CdmEntityContainer="ComplianceEntities4">
+          <EntitySetMapping Name="tbl_em_employeedetails">
+            <EntityTypeMapping TypeName="ComplianceModel.tbl_em_employeedetails">
+              <MappingFragment StoreEntitySet="tbl_em_employeedetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="companycode" ColumnName="companycode" />
+                <ScalarProperty Name="companyname" ColumnName="companyname" />
+                <ScalarProperty Name="branchname" ColumnName="branchname" />
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
+                <ScalarProperty Name="REPTMGR1" ColumnName="REPTMGR1" />
+                <ScalarProperty Name="REPORTINGMANAGER1CODE" ColumnName="REPORTINGMANAGER1CODE" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="OFFICEEMAIL" ColumnName="OFFICEEMAIL" />
+                <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_MST_BRANCH">
+            <EntityTypeMapping TypeName="ComplianceModel.TBL_MST_BRANCH">
+              <MappingFragment StoreEntitySet="TBL_MST_BRANCH">
+                <ScalarProperty Name="BRANCH_ID" ColumnName="BRANCH_ID" />
+                <ScalarProperty Name="BRANCH_NAME" ColumnName="BRANCH_NAME" />
+                <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_MST_CATEGORIES">
+            <EntityTypeMapping TypeName="ComplianceModel.TBL_MST_CATEGORIES">
+              <MappingFragment StoreEntitySet="TBL_MST_CATEGORIES">
+                <ScalarProperty Name="CATEGORY_ID" ColumnName="CATEGORY_ID" />
+                <ScalarProperty Name="CATEGORY_NAME" ColumnName="CATEGORY_NAME" />
+                <ScalarProperty Name="CATEGORY_DETAILS" ColumnName="CATEGORY_DETAILS" />
+                <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_MST_DOCUMENT_TYPES">
+            <EntityTypeMapping TypeName="ComplianceModel.TBL_MST_DOCUMENT_TYPES">
+              <MappingFragment StoreEntitySet="TBL_MST_DOCUMENT_TYPES">
+                <ScalarProperty Name="DOCUMENT_TYPE_ID" ColumnName="DOCUMENT_TYPE_ID" />
+                <ScalarProperty Name="DOCUMENT_TYPE_NAME" ColumnName="DOCUMENT_TYPE_NAME" />
+                <ScalarProperty Name="DOCUMENT_TYPE_DETAILS" ColumnName="DOCUMENT_TYPE_DETAILS" />
+                <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_MST_ROLES">
+            <EntityTypeMapping TypeName="ComplianceModel.TBL_MST_ROLES">
+              <MappingFragment StoreEntitySet="TBL_MST_ROLES">
+                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+                <ScalarProperty Name="Role_Description" ColumnName="Role_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,1 @@
+﻿BACKUP DATABASE Compliance TO DISK='C:\Users\Devansh\Documents\Occupancy_updated\Compliance.bak'

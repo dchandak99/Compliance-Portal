@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ComplianceModelStoreContainer" CdmEntityContainer="ComplianceEntities2">
+    <EntitySetMapping Name="tbl_em_employeedetails">
+      <EntityTypeMapping TypeName="ComplianceModel.tbl_em_employeedetails">
+        <MappingFragment StoreEntitySet="tbl_em_employeedetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="companycode" ColumnName="companycode" />
+          <ScalarProperty Name="companyname" ColumnName="companyname" />
+          <ScalarProperty Name="branchname" ColumnName="branchname" />
+          <ScalarProperty Name="branchid" ColumnName="branchid" />
+          <ScalarProperty Name="REPTMGR1" ColumnName="REPTMGR1" />
+          <ScalarProperty Name="REPORTINGMANAGER1CODE" ColumnName="REPORTINGMANAGER1CODE" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="OFFICEEMAIL" ColumnName="OFFICEEMAIL" />
+          <ScalarProperty Name="ROLEID" ColumnName="ROLEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

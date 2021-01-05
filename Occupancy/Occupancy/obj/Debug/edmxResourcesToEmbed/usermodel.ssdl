@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ComplianceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_em_employeedetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeCode" Type="varchar" MaxLength="50" />
+    <Property Name="FullName" Type="varchar" MaxLength="160" />
+    <Property Name="isactive" Type="char" MaxLength="1" />
+    <Property Name="companycode" Type="varchar" MaxLength="100" />
+    <Property Name="companyname" Type="varchar" MaxLength="100" />
+    <Property Name="branchname" Type="varchar" MaxLength="100" />
+    <Property Name="branchid" Type="int" />
+    <Property Name="REPTMGR1" Type="int" />
+    <Property Name="REPORTINGMANAGER1CODE" Type="varchar" MaxLength="50" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="OFFICEEMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="ROLEID" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_MST_BRANCH">
+    <Key>
+      <PropertyRef Name="BRANCH_ID" />
+    </Key>
+    <Property Name="BRANCH_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="BRANCH_NAME" Type="nchar" MaxLength="10" />
+    <Property Name="ISACTIVE" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TBL_MST_CATEGORIES">
+    <Key>
+      <PropertyRef Name="CATEGORY_ID" />
+    </Key>
+    <Property Name="CATEGORY_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="CATEGORY_NAME" Type="nchar" MaxLength="10" />
+    <Property Name="CATEGORY_DETAILS" Type="nchar" MaxLength="10" />
+    <Property Name="ISACTIVE" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_MST_DOCUMENT_TYPES">
+    <Key>
+      <PropertyRef Name="DOCUMENT_TYPE_ID" />
+    </Key>
+    <Property Name="DOCUMENT_TYPE_ID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="DOCUMENT_TYPE_NAME" Type="nchar" MaxLength="10" />
+    <Property Name="DOCUMENT_TYPE_DETAILS" Type="nchar" MaxLength="10" />
+    <Property Name="ISACTIVE" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_MST_ROLES">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="int" Nullable="false" />
+    <Property Name="Role_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Role_Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ComplianceModelStoreContainer">
+    <EntitySet Name="tbl_em_employeedetails" EntityType="Self.tbl_em_employeedetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MST_BRANCH" EntityType="Self.TBL_MST_BRANCH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MST_CATEGORIES" EntityType="Self.TBL_MST_CATEGORIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MST_DOCUMENT_TYPES" EntityType="Self.TBL_MST_DOCUMENT_TYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_MST_ROLES" EntityType="Self.TBL_MST_ROLES" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
