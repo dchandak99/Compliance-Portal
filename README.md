@@ -1,5 +1,5 @@
 # Compliance Portal: Development Internship
-This has the work I did in Winters of 2020-21 as an intern at [Motilal Oswal](https://www.motilaloswal.com/).
+This repository has the work I did in Winters of 2020-21 as an intern at [Motilal Oswal](https://www.motilaloswal.com/).
 
 Project Statement can be found [here](scope.pdf).  
 
