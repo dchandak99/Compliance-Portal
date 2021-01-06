@@ -17,4 +17,4 @@ Project Statement can be found [here](scope.pdf).
 ## Instructions to run  
 - Open with Visual Studio  
 - Restore database from Compliance.bak. You may need to re-establish connection strings of Sql Data Sources and Entity Data Sources  
-- Build Solution and Start Debugging  
+- Build [Solution](Occupancy/Occupancy/Occupancy.sln) and Start Debugging  
